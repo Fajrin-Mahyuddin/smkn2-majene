@@ -8,12 +8,6 @@
     @inertiaHead
   </head>
   <body>
-    @inertia
-    <div>
-  <div>oke</div>
-  <div>
-asdas
-        </div>
-    </div>
+    @inertia 
   </body>
 </html>

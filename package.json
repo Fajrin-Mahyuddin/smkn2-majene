@@ -3,7 +3,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "format": "prettier --write ."
+        "format": "prettier --write resources/**/*.jsx --use-tabs=2"
     },
     "devDependencies": {
         "@inertiajs/react": "^1.0.14",

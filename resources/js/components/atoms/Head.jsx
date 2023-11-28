@@ -1,11 +1,11 @@
-import { Head } from '@inertiajs/react'
+import { Head } from "@inertiajs/react";
 
 const Site = ({ title }) => {
-  return (
-    <Head>
-      <title>{`${title} - ` || ""}</title>
-    </Head>
-  )
-}
+	return (
+		<Head>
+			<title>{`${title} - ` || ""}</title>
+		</Head>
+	);
+};
 
-export default Site
+export default Site;
