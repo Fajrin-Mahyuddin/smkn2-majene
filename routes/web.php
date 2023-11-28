@@ -18,3 +18,5 @@ use App\Http\Controllers\IndexController;
 //     return view('index');
 // });
 Route::get("/", [IndexController::class, "show"]);
+Route::get("/profile", [IndexController::class, "render"]);
+Route::post("/user", [IndexController::class, "postUser"]);
