@@ -6,9 +6,12 @@ import Center from "@/components/atoms/Center";
 import { PpdbSvg } from "@/components/atoms/icons/Ppdb";
 import { KompetensiKeahlian } from "@/components/atoms/icons/KompetensiKeahlian";
 import { Alumni } from "@/components/atoms/icons/Alumni";
+import { StrukturOrganisasiSvg } from "@/components/atoms/icons/StrukturOrganisasi";
+import { BeritaSvg } from "@/components/atoms/icons/Berita";
+import { SiswaSvg } from "@/components/atoms/icons/Siswa";
 
 const Section = styled.section`
-	background-color: #eaeaea;
+	background-color: #fff;
 `;
 const Wrapper = styled(Container)`
 	display: flex;
@@ -86,19 +89,19 @@ const MainMenus = () => {
 				<Flex>
 					<Item>
 						<Links href="#">
-							<PpdbSvg colors="#107E57" />
+							<StrukturOrganisasiSvg colors="#107E57" />
 						</Links>
 						<Label>Struktur Organisasi</Label>
 					</Item>
 					<Item>
 						<Links href="#">
-							<PpdbSvg colors="#107E57" />
+							<BeritaSvg colors="#107E57" />
 						</Links>
 						<Label>Berita</Label>
 					</Item>
 					<Item>
 						<Links href="#">
-							<PpdbSvg colors="#107E57" />
+							<SiswaSvg colors="#107E57" />
 						</Links>
 						<Label>Siswa</Label>
 					</Item>
