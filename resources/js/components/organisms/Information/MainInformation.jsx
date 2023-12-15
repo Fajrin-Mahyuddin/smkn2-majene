@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import HeadingMenu from "@/components/organisms/menus/HeadingMenu";
 import boxBg from "@/assets/images/box-bg.png";
@@ -6,6 +6,7 @@ import Container from "@/components/templates/Container";
 import { Button } from "antd";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import Slider from "react-slick";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -100,6 +101,23 @@ const HStack = styled.div`
 	gap: ${(props) => props.$gap};
 `;
 
+const ButtonStyled = styled(Button)`
+	background-color: ${({ $bg = "#107e57" }) => $bg};
+	color: ${({ $colors = "#fff" }) => $colors};
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	& .ant-wave {
+		color: #107e57;
+	}
+	&:hover {
+		background-color: #107e57;
+		color: #fff !important;
+	}
+`;
+
 const MainInformation = () => {
 	const SlideRef = useRef(null);
 	const settings = {
@@ -175,10 +193,20 @@ const MainInformation = () => {
 						</Slider>
 					</CarouselBox>
 					<HStack $paddingX="10px">
-						<Button>Lihat Semua</Button>
+						<ButtonStyled>Lihat Semua</ButtonStyled>
 						<HStack $gap="10px">
-							<Button onClick={prev}>Prev</Button>
-							<Button onClick={next}>Next</Button>
+							<ButtonStyled
+								$bg="#fff"
+								$colors="#105e57"
+								onClick={prev}
+								icon={<MdChevronLeft size={20} />}
+							/>
+							<ButtonStyled
+								$bg="#fff"
+								$colors="#105e57"
+								onClick={next}
+								icon={<MdChevronRight size={20} />}
+							/>
 						</HStack>
 					</HStack>
 				</CarouselContainer>

@@ -9,12 +9,13 @@ import Button from "@/components/atoms/Button";
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Wrapper = styled("div")`
-	width: 50%;
+	width: 40%;
+	min-width: 250px;
 `;
 const Heading = styled("h1")`
 	color: #107e57;
 	font-weight: bold;
-	font-size: 4rem;
+	font-size: 3.3rem;
 `;
 const SubHeading = styled("span")`
 	color: #014760;
