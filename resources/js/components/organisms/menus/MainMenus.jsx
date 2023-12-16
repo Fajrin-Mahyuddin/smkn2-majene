@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeadingMenu from "@/components/organisms/menus/HeadingMenu";
+import HeadingMenu from "@/components/molecules/HeadingMenu";
 import Container from "@/components/templates/Container";
 import Center from "@/components/atoms/Center";
 import { PpdbSvg } from "@/components/atoms/icons/Ppdb";

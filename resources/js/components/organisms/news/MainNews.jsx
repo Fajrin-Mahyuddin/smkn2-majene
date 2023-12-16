@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "@/components/templates/Container";
-import HeadingMenu from "@/components/organisms/menus/HeadingMenu";
+import HeadingMenu from "@/components/molecules/HeadingMenu";
 import ExampleJpg from "@/assets/images/example-img.jpg";
 import { AiOutlineUser, AiTwotoneCalendar } from "react-icons/ai";
 import postBg from "@/assets/images/post-bg.svg";

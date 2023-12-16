@@ -5,6 +5,7 @@ import MainHero from "@/components/organisms/hero/MainHero";
 import MainMenus from "@/components/organisms/menus/MainMenus";
 import MainInformation from "@/components/organisms/Information/MainInformation";
 import MainNews from "@/components/organisms/news/MainNews";
+import MainFeedback from "@/components/organisms/feedback/MainFeedback";
 
 const HomePage = () => {
 	return (
@@ -14,6 +15,7 @@ const HomePage = () => {
 			<MainMenus />
 			<MainInformation />
 			<MainNews />
+			<MainFeedback />
 		</MainLayout>
 	);
 };

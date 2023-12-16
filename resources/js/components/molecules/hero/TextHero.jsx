@@ -7,6 +7,7 @@ import ytIcon from "@/assets/icons/yt.svg";
 import igIcon from "@/assets/icons/ig.svg";
 import Button from "@/components/atoms/Button";
 import { AiOutlineSearch } from "react-icons/ai";
+import { Flex } from "antd";
 
 const Wrapper = styled("div")`
 	width: 40%;
@@ -20,12 +21,8 @@ const Heading = styled("h1")`
 const SubHeading = styled("span")`
 	color: #014760;
 `;
-const Flex = styled("div")`
-	display: flex;
-	flex-direction: ${(props) => props.$flexDir};
-	justify-content: ${(props) => props.$justifyContent};
+const FlexStyled = styled(Flex)`
 	margin-top: ${(props) => props.$mt};
-	gap: ${(props) => props.$gap};
 `;
 const Box = styled(Flex)`
 	background-color: #d9d9d9;
@@ -57,8 +54,14 @@ const Input = styled("input")`
 	border: 2px solid #107e57;
 	outline: none;
 	font-size: 1rem;
-	border-radius: 7px;
+	border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
 	padding: 0px 10px;
+`;
+const ButtonGroup = styled(Button)`
+	border-radius: 0;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
 `;
 
 const TextHero = () => {
@@ -81,33 +84,33 @@ const TextHero = () => {
 				</div>
 				<Image $w="10%" $isflip src={quoteIcon} alt="quote icon" />
 			</Box>
-			<Flex $justifyContent="space-between" $mt="10px">
-				<Flex $gap="10px">
+			<FlexStyled justify="space-between" $mt="10px">
+				<FlexStyled>
 					<Input
 						defaultValue={q}
 						type="search"
 						name="q"
 						onChange={(e) => setQ(e.currentTarget.value)}
 					/>
-					<Button onClick={() => console.log("oke", q)}>
+					<ButtonGroup onClick={() => console.log("oke", q)}>
 						<AiOutlineSearch size={25} />
-					</Button>
-				</Flex>
-				<Flex $gap="5px">
+					</ButtonGroup>
+				</FlexStyled>
+				<FlexStyled align="center" justify="flex-end">
 					<a href="# ">
-						<Image src={fbIcon} alt="ig" />
-					</a>
-					<a href="# ">
-						<Image src={xIcon} alt="ig" />
+						<Image $w="85%" src={fbIcon} alt="ig" />
 					</a>
 					<a href="# ">
-						<Image src={igIcon} alt="ig" />
+						<Image $w="85%" src={xIcon} alt="ig" />
 					</a>
-					<a href="# " style={{ paddingTop: "4px" }}>
-						<Image src={ytIcon} alt="ig" />
+					<a href="# ">
+						<Image $w="85%" src={igIcon} alt="ig" />
 					</a>
-				</Flex>
-			</Flex>
+					<a href="# ">
+						<Image $w="85%" src={ytIcon} alt="ig" />
+					</a>
+				</FlexStyled>
+			</FlexStyled>
 		</Wrapper>
 	);
 };

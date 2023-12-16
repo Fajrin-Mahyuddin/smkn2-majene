@@ -1,28 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import HeadingMenu from "@/components/molecules/HeadingMenu";
 import Container from "@/components/templates/Container";
-import CarouselInformation from "@/components/molecules/information/CarouselInformation";
+import HeadingMenu from "@/components/molecules/HeadingMenu";
+import CarouselFeedback from "@/components/molecules/feedback/CarouselFeedback";
 
 const Section = styled.section`
 	background-color: #d9d9d9;
 `;
 const Wrapper = styled(Container)`
 	margin: 30px auto;
+	padding-bottom: 30px;
 `;
 
-const MainInformation = () => {
+const MainFeedback = () => {
 	return (
 		<Section>
 			<Wrapper>
 				<HeadingMenu
-					title="Pengumuman"
-					subtitle="Informasi singkat terkait pengumuman"
+					title="Apa Kata Alumni"
+					subtitle="Alumni SMKN 2 Majene"
 				/>
-				<CarouselInformation />
+				<CarouselFeedback />
 			</Wrapper>
 		</Section>
 	);
 };
 
-export default MainInformation;
+export default MainFeedback;
