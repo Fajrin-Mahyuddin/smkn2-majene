@@ -4,7 +4,7 @@ import HeadingMenu from "@/components/molecules/HeadingMenu";
 import Container from "@/components/templates/Container";
 import Center from "@/components/atoms/Center";
 import { PpdbSvg } from "@/components/atoms/icons/Ppdb";
-import { KompetensiKeahlian } from "@/components/atoms/icons/KompetensiKeahlian";
+import { KompetensiKeahlianSvg } from "@/components/atoms/icons/KompetensiKeahlian";
 import { Alumni } from "@/components/atoms/icons/Alumni";
 import { StrukturOrganisasiSvg } from "@/components/atoms/icons/StrukturOrganisasi";
 import { BeritaSvg } from "@/components/atoms/icons/Berita";
@@ -73,8 +73,8 @@ const MainMenus = () => {
 						<Label>PPDB Online</Label>
 					</Item>
 					<Item>
-						<Links href="#">
-							<KompetensiKeahlian colors="#107E57" />
+						<Links href="/kompetensi-keahlian">
+							<KompetensiKeahlianSvg colors="#107E57" />
 						</Links>
 						<Label>Kompetensi Keahlian</Label>
 					</Item>
@@ -88,7 +88,7 @@ const MainMenus = () => {
 
 				<Flex>
 					<Item>
-						<Links href="#">
+						<Links href="/struktur-organisasi">
 							<StrukturOrganisasiSvg colors="#107E57" />
 						</Links>
 						<Label>Struktur Organisasi</Label>

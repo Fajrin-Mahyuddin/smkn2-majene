@@ -1,0 +1,18 @@
+<svg width="1440" height="469" viewBox="0 0 1440 469" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_36_622)">
+<rect width="1440" height="469" fill="#D9D9D9" fill-opacity="0.34"/>
+<path d="M371.433 -281.475L1165.01 -1014.21L2288.26 -303.051L1494.68 429.687C1494.68 429.687 1348.47 505.189 1195.79 240.449C1043.1 -24.2915 811.945 112.084 719.473 -74.6512C627.002 -261.387 371.433 -281.475 371.433 -281.475Z" fill="#107E57"/>
+<path d="M338.992 -327.262L1132.57 -1060L2320.7 -307.758L1527.12 424.98C1527.12 424.98 1378.71 499.084 1210.97 224.811C1043.22 -49.4633 809.205 85.102 706.635 -108.028C604.064 -301.158 338.992 -327.262 338.992 -327.262Z" fill="#A1CE3F"/>
+<circle cx="360.614" cy="137.241" r="33.7414" stroke="#A4A4A4" stroke-opacity="0.25" stroke-width="15"/>
+<circle cx="863.911" cy="235.762" r="18.6756" stroke="#A4A4A4" stroke-opacity="0.25" stroke-width="10"/>
+<circle cx="545.436" cy="292.278" r="66.5817" stroke="#A4A4A4" stroke-opacity="0.11" stroke-width="15"/>
+<rect x="707" y="119" width="83" height="83" stroke="#107E57" stroke-opacity="0.3" stroke-width="10"/>
+<rect x="53.7129" y="216.322" width="50.9354" height="50.9354" transform="rotate(3.8174 53.7129 216.322)" stroke="#107E57" stroke-opacity="0.25" stroke-width="10"/>
+<rect x="1339.33" y="113.83" width="63" height="63" transform="rotate(30 1339.33 113.83)" stroke="#107E57" stroke-opacity="0.3" stroke-width="10"/>
+</g>
+<defs>
+<clipPath id="clip0_36_622">
+<rect width="1440" height="469" fill="white"/>
+</clipPath>
+</defs>
+</svg>

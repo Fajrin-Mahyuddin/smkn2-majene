@@ -1,4 +1,4 @@
-export const KompetensiKeahlian = ({ colors = "#107E57" }) => (
+export const KompetensiKeahlianSvg = ({ colors = "#107E57" }) => (
 	<svg
 		width="201"
 		height="186"

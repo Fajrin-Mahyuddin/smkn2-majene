@@ -7,7 +7,7 @@ const { Title, Text } = Typography;
 
 const Footer = styled.footer`
 	/* width: 100%; */
-	background-color: #d9d9d9;
+	background-color: ${({ $bg }) => $bg};
 	background-image: url(${footerSvgBg});
 	background-position: top;
 	background-repeat: no-repeat;
@@ -35,9 +35,9 @@ const Content = styled(Col)`
 	}
 `;
 
-const MainFooter = () => {
+const MainFooter = ({ footerBg = "#d9d9d9" }) => {
 	return (
-		<Footer>
+		<Footer $bg={footerBg}>
 			<Wrapper>
 				<Row>
 					<Content span={8}>

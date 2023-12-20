@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
 import { Button } from "antd";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import ItemCarousel from "@/components/atoms/information/ItemCarousel";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ItemCarousel from "../../atoms/information/ItemCarousel";
 
 const CarouselContainer = styled.div`
 	display: flex;
