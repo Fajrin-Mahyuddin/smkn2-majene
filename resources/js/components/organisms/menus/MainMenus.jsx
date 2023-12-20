@@ -94,7 +94,7 @@ const MainMenus = () => {
 						<Label>Struktur Organisasi</Label>
 					</Item>
 					<Item>
-						<Links href="#">
+						<Links href="/berita">
 							<BeritaSvg colors="#107E57" />
 						</Links>
 						<Label>Berita</Label>
