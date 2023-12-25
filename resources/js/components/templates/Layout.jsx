@@ -8,12 +8,12 @@ const BaseLayout = styled(Layout)`
 	width: 100%;
 `;
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ footerBg, children }) => {
 	return (
 		<BaseLayout>
 			<Navbar />
 			{children}
-			<Footer />
+			<Footer footerBg={footerBg} />
 		</BaseLayout>
 	);
 };
