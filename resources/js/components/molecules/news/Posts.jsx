@@ -26,7 +26,7 @@ const Posts = styled.div`
 	gap: 15px;
 `;
 
-const Post = styled.div`
+const Post = styled.a`
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
@@ -71,7 +71,7 @@ const PostsList = () => {
 	return (
 		<Space direction="vertical">
 			<Posts>
-				<Post>
+				<Post href="/berita/penerimaan-siswa-baru-tahun-ajaran-2023">
 					<ImagePost
 						src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 						alt="post title"

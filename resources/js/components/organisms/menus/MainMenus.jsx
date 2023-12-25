@@ -79,7 +79,7 @@ const MainMenus = () => {
 						<Label>Kompetensi Keahlian</Label>
 					</Item>
 					<Item>
-						<Links href="#">
+						<Links href="/alumni">
 							<Alumni colors="#107E57" />
 						</Links>
 						<Label>Alumni</Label>
@@ -100,7 +100,7 @@ const MainMenus = () => {
 						<Label>Berita</Label>
 					</Item>
 					<Item>
-						<Links href="#">
+						<Links href="/siswa">
 							<SiswaSvg colors="#107E57" />
 						</Links>
 						<Label>Siswa</Label>

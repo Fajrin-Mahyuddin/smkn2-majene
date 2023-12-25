@@ -5,6 +5,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\menu\KompetensiKeahlianController;
 use App\Http\Controllers\menu\StrukturOrganisasiController;
 use App\Http\Controllers\menu\BeritaController;
+use App\Http\Controllers\menu\AlumniController;
+use App\Http\Controllers\menu\SiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,6 @@ Route::get("/kompetensi-keahlian/{slug}", [KompetensiKeahlianController::class, 
 
 Route::get("/struktur-organisasi", [StrukturOrganisasiController::class, "index"]);
 Route::get("/berita", [BeritaController::class, "index"]);
+Route::get("/berita/{slug}", [BeritaController::class, "detail"]);
+Route::get("/alumni", [AlumniController::class, "index"]);
+Route::get("/siswa", [SiswaController::class, "index"]);

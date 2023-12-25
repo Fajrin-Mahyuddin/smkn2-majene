@@ -4,11 +4,12 @@ import MainLayout from "@/components/templates/Layout";
 import styled from "styled-components";
 import detailBg from "@/assets/images/detail-bg.svg";
 import Container from "@/components/templates/Container";
-import { Divider } from "antd";
+import { Divider, Typography } from "antd";
 
 import PostsList from "@/components/molecules/news/Posts";
 import CarouselImage from "@/components/molecules/CarouselImage";
 
+const { Title } = Typography;
 const Section = styled.div`
 	width: 100%;
 	background-color: #fff;
@@ -52,6 +53,7 @@ const Detail = ({ data }) => {
 				<CarouselImage />
 				<Wrapper>
 					<Divider />
+					<Title level={2}>Berita Terkait</Title>
 					<PostsList />
 					<Divider />
 				</Wrapper>

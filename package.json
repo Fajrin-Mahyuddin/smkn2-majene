@@ -3,13 +3,15 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "format": "prettier --write resources/**/*.jsx --use-tabs=2"
+        "format": "prettier --write resources/**/*.jsx --use-tabs=2",
+        "prepare": "husky install"
     },
     "devDependencies": {
         "@inertiajs/react": "^1.0.14",
         "@types/react-slick": "^0.23.12",
         "@vitejs/plugin-react": "^4.2.0",
         "axios": "^1.1.2",
+        "husky": "^8.0.3",
         "laravel-vite-plugin": "^0.7.2",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
