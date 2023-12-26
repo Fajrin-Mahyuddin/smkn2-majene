@@ -7,10 +7,10 @@ import kepsek from "@/assets/images/kepsek.jpg";
 import cardBg from "@/assets/images/card-bg.png";
 import styled from "styled-components";
 import Container from "@/components/templates/Container";
+import { MobileView } from "@/constants/responsiveSize";
 import { StrukturOrganisasiSvg } from "@/components/atoms/icons/StrukturOrganisasi";
 
 const { Title } = Typography;
-
 const Section = styled.section`
 	background-color: #fff;
 `;
@@ -21,6 +21,9 @@ const Layout = styled(Container)`
 	padding: 5vh 30px;
 	background-color: #fff;
 	grid-template-columns: repeat(2, 1fr);
+	@media screen and (max-width: ${MobileView}) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `;
 const CardStyled = styled(Card)`
 	background-color: #fff;
@@ -63,7 +66,9 @@ const StrukturOrtanisasiPage = () => {
 										<TitleStyled level={5}>
 											Ketua Jurusan
 										</TitleStyled>
-										<CardDesc>Dr Shalihuddin Mp</CardDesc>
+										<CardDesc>
+											Dr Shalihuddin Mp {i}
+										</CardDesc>
 									</CardDesc>
 								</Flex>
 							</CardStyled>

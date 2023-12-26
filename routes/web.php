@@ -25,6 +25,8 @@ use App\Http\Controllers\menu\SiswaController;
 Route::get("/profile", [IndexController::class, "render"]);
 Route::post("/user", [IndexController::class, "postUser"]);
 Route::get("/", [IndexController::class, "index"]);
+Route::get("/visi-misi", [IndexController::class, "visi_misi"]);
+Route::get("/pengumuman", [IndexController::class, "pengumuman"]);
 Route::get("/kompetensi-keahlian", [KompetensiKeahlianController::class, "index"]);
 Route::get("/kompetensi-keahlian/{slug}", [KompetensiKeahlianController::class, "detail"]);
 

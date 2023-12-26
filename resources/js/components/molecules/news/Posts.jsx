@@ -5,6 +5,7 @@ import postBg from "@/assets/images/post-bg.svg";
 import { AiOutlineUser, AiTwotoneCalendar } from "react-icons/ai";
 import { Flex, Space, Tag, Typography } from "antd";
 import DefaultButton from "@/components/atoms/DefaultButton";
+import { MobileView } from "@/constants/responsiveSize";
 const { Text } = Typography;
 
 const TextCostume = styled(Text)`
@@ -24,6 +25,9 @@ const Posts = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 15px;
+	@media screen and (max-width: ${MobileView}) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `;
 
 const Post = styled.a`
@@ -56,6 +60,10 @@ const DescriptionPost = styled(Flex)`
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
+
+	@media screen and (max-width: ${MobileView}) {
+		transform: translateY(0);
+	}
 `;
 
 const Span = styled.span`
@@ -67,7 +75,7 @@ const Span = styled.span`
 	gap: 3px;
 `;
 
-const PostsList = () => {
+const PostsList = ({ labelBtn = "Lihat Semua" }) => {
 	return (
 		<Space direction="vertical">
 			<Posts>
@@ -333,7 +341,7 @@ const PostsList = () => {
 					</DescriptionPost>
 				</Post>
 			</Posts>
-			<DefaultButton>Lihat Semua</DefaultButton>
+			<DefaultButton>{labelBtn}</DefaultButton>
 		</Space>
 	);
 };

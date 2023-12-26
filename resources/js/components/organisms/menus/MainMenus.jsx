@@ -9,6 +9,7 @@ import { Alumni } from "@/components/atoms/icons/Alumni";
 import { StrukturOrganisasiSvg } from "@/components/atoms/icons/StrukturOrganisasi";
 import { BeritaSvg } from "@/components/atoms/icons/Berita";
 import { SiswaSvg } from "@/components/atoms/icons/Siswa";
+import { MobileView } from "@/constants/responsiveSize";
 
 const Section = styled.section`
 	background-color: #fff;
@@ -20,16 +21,29 @@ const Wrapper = styled(Container)`
 	flex-direction: column;
 	margin: 30px auto;
 	gap: 30px;
-`;
-const Flex = styled.div`
-	display: flex;
 	width: 100%;
+`;
+const Grid = styled.div`
+	display: grid;
+	width: 35vw;
 	max-width: 1540px;
 	align-items: flex-start;
-	justify-content: space-evenly;
+	justify-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 100px;
+	@media screen and (max-width: ${MobileView}) {
+		width: 100vw;
+		gap: 20px 10px;
+		grid-template-columns: repeat(2, 1fr);
+	}
 `;
 const Links = styled.a`
 	cursor: pointer;
+	& svg {
+		margin-bottom: 10px;
+		height: auto;
+		width: auto;
+	}
 	& path,
 	& svg {
 		transition: all 0.3s linear;
@@ -45,16 +59,29 @@ const Links = styled.a`
 			fill: #107e57;
 		}
 	}
+	@media screen and (max-width: ${MobileView}) {
+		& svg {
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
 `;
 
 const Item = styled(Center)`
-	width: 200px;
 	text-align: center;
+	justify-self: center;
+	width: auto;
+	@media screen and (max-width: ${MobileView}) {
+		width: 140px;
+	}
 `;
 
 const Label = styled.div`
 	font-size: 1.5rem;
 	font-weight: 600;
+	@media screen and (max-width: ${MobileView}) {
+		font-size: 1.2rem;
+	}
 `;
 
 const MainMenus = () => {
@@ -65,7 +92,7 @@ const MainMenus = () => {
 					title="Selamat Datang"
 					subtitle="Menu pilihan utama"
 				/>
-				<Flex>
+				<Grid>
 					<Item>
 						<Links href="#">
 							<PpdbSvg colors="#107E57" />
@@ -84,9 +111,6 @@ const MainMenus = () => {
 						</Links>
 						<Label>Alumni</Label>
 					</Item>
-				</Flex>
-
-				<Flex>
 					<Item>
 						<Links href="/struktur-organisasi">
 							<StrukturOrganisasiSvg colors="#107E57" />
@@ -105,7 +129,7 @@ const MainMenus = () => {
 						</Links>
 						<Label>Siswa</Label>
 					</Item>
-				</Flex>
+				</Grid>
 			</Wrapper>
 		</Section>
 	);

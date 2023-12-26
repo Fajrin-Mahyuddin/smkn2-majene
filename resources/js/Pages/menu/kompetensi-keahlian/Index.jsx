@@ -7,6 +7,7 @@ import exampleImg2 from "@/assets/images/example-img2.png";
 import cardBg from "@/assets/images/card-bg.png";
 import styled from "styled-components";
 import Container from "@/components/templates/Container";
+import { MobileView } from "@/constants/responsiveSize";
 import { KompetensiKeahlianSvg } from "@/components/atoms/icons/KompetensiKeahlian";
 
 const { Title } = Typography;
@@ -21,6 +22,9 @@ const Layout = styled(Container)`
 	padding: 5vh 30px;
 	background-color: #fff;
 	grid-template-columns: repeat(3, 1fr);
+	@media screen and (max-width: ${MobileView}) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `;
 const CardStyled = styled(Card)`
 	background-color: transparent;
@@ -47,35 +51,33 @@ const KompetensiKeahlian = () => {
 			/>
 			<Section>
 				<Layout>
-					{Array(6)
-						.fill("")
-						.map((_, i) => (
-							<a
-								href="/kompetensi-keahlian/teknik-komputer-dan-jaringan"
-								key={i}
+					{Array.from({ length: 6 }).map((_, i) => (
+						<a
+							href="/kompetensi-keahlian/teknik-komputer-dan-jaringan"
+							key={i}
+						>
+							<CardStyled
+								bordered={false}
+								hoverable
+								cover={
+									<img
+										src={exampleImg2}
+										alt="Kompetensi keahlian"
+									/>
+								}
 							>
-								<CardStyled
-									bordered={false}
-									hoverable
-									cover={
-										<img
-											src={exampleImg2}
-											alt="Kompetensi keahlian"
-										/>
-									}
-								>
-									<CardDesc>
-										<TitleStyled level={3}>
-											Teknik Komputer dan Jaringan
-										</TitleStyled>
-										<TitleStyled level={5}>
-											Ketua Jurusan
-										</TitleStyled>
-										<CardDesc>Dr Shalihuddin Mp</CardDesc>
-									</CardDesc>
-								</CardStyled>
-							</a>
-						))}
+								<CardDesc>
+									<TitleStyled level={3}>
+										Teknik Komputer dan Jaringan
+									</TitleStyled>
+									<TitleStyled level={5}>
+										Ketua Jurusan
+									</TitleStyled>
+									<CardDesc>Dr Shalihuddin Mp</CardDesc>
+								</CardDesc>
+							</CardStyled>
+						</a>
+					))}
 				</Layout>
 			</Section>
 		</MainLayout>

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FeedbackItem from "@/components/atoms/feedback/Item";
+import { MobileView } from "@/constants/responsiveSize";
 
 const Feedback = styled.div`
 	margin-top: 50px;
@@ -21,6 +22,14 @@ const CarouselFeedback = () => {
 		slidesToScroll: 1,
 		swipeToSlide: true,
 		autoplay: true,
+		responsive: [
+			{
+				breakpoint: MobileView,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	};
 	return (
 		<Feedback>

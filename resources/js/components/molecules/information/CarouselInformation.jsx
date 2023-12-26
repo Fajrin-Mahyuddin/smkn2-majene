@@ -7,6 +7,7 @@ import ItemCarousel from "@/components/atoms/information/ItemCarousel";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { MobileView } from "@/constants/responsiveSize";
 
 const CarouselContainer = styled.div`
 	display: flex;
@@ -17,7 +18,6 @@ const CarouselContainer = styled.div`
 const CarouselBox = styled.div`
 	width: inherit;
 `;
-
 const HStack = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -26,7 +26,6 @@ const HStack = styled.div`
 	padding-right: ${(props) => props.$paddingX};
 	gap: ${(props) => props.$gap};
 `;
-
 const ButtonStyled = styled(Button)`
 	background-color: ${({ $bg = "#107e57" }) => $bg};
 	color: ${({ $colors = "#fff" }) => $colors};
@@ -54,6 +53,14 @@ const CarouselInformation = () => {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		swipeToSlide: true,
+		responsive: [
+			{
+				breakpoint: MobileView,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	};
 
 	const next = (e) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { MobileView } from "@/constants/responsiveSize";
 
 const Wrapper = styled.div`
 	width: inherit;
@@ -11,6 +12,9 @@ const Heading = styled.h1`
 	margin: 10px 0;
 	font-size: 2.5rem;
 	font-weight: 700;
+	@media screen and (max-width: ${MobileView}) {
+		font-size: 1.7rem;
+	}
 `;
 const SubHeading = styled.p`
 	font-size: 1rem;

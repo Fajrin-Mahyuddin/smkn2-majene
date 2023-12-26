@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import ExampleAvatar from "@/assets/images/example-user.jpg";
 import quoteIcon from "@/assets/icons/quote.svg";
+import { MobileView } from "@/constants/responsiveSize";
 
 const CardStyled = styled("div")`
 	display: flex !important;
@@ -11,7 +12,10 @@ const CardStyled = styled("div")`
 	border-radius: 10px;
 	flex-direction: row;
 	width: 100%;
-	gap: 10%;
+	gap: 20px;
+	@media screen and (max-width: ${MobileView}) {
+		flex-direction: column;
+	}
 `;
 
 const FlexStyled = styled(Flex)`
@@ -37,6 +41,7 @@ const Img = styled.img`
 const Text = styled.p`
 	font-size: 0.9rem;
 	line-height: 1.4;
+	margin: 0 5px;
 	font-style: italic;
 `;
 
