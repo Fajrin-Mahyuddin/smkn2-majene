@@ -3,6 +3,8 @@ import { Space, Flex, Table, Tag } from "antd";
 import styled from "styled-components";
 import Button from "@/components/atoms/Button";
 import { AiOutlineSearch } from "react-icons/ai";
+import { MobileView } from "@/constants/responsiveSize";
+
 const columns = [
 	{
 		title: "Name",
@@ -84,12 +86,20 @@ const Input = styled("input")`
 	border-bottom-left-radius: 7px;
 	border-top-left-radius: 7px;
 	padding: 5px 10px;
+	@media screen and (max-width: ${MobileView}) {
+		width: 100%;
+	}
 `;
 const ButtonGroup = styled(Button)`
 	border-radius: 0;
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 `;
+const Box = styled.div`
+	width: 100%;
+	overflow: auto;
+`;
+
 const TableSiswa = () => {
 	return (
 		<>
@@ -99,7 +109,9 @@ const TableSiswa = () => {
 					<AiOutlineSearch size={25} />
 				</ButtonGroup>
 			</FlexStyled>
-			<Table columns={columns} dataSource={data} />
+			<Box>
+				<Table columns={columns} dataSource={data} />
+			</Box>
 		</>
 	);
 };
