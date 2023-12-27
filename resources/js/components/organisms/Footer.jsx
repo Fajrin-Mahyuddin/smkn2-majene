@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Container from "@/components/templates/Container";
 import footerSvgBg from "@/assets/images/footer-bg.svg";
-import { Col, Divider, Row, Tag, Typography, Flex, Space } from "antd";
+import { MobileView } from "@/constants/responsiveSize";
+import { Col, Divider, Row, Tag, Typography, Flex } from "antd";
 const { Title, Text } = Typography;
 
 const Footer = styled.footer`
@@ -35,13 +36,21 @@ const Content = styled(Col)`
 	}
 `;
 
+const RowStyled = styled(Row)`
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@media screen and (max-width: ${MobileView}) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
+`;
+
 const MainFooter = ({ footerBg = "#d9d9d9" }) => {
 	return (
 		<Footer $bg={footerBg}>
 			<Wrapper>
-				<Row>
-					<Content span={8}>
-						{/* <Content> */}
+				<RowStyled>
+					<Content>
 						<Title level={4}>Detail Kontak</Title>
 						<Divider
 							style={{
@@ -55,9 +64,11 @@ const MainFooter = ({ footerBg = "#d9d9d9" }) => {
 						</Text>
 						<Text>info@smkn2-maj.sch.id</Text>
 						<Text>0422-21217</Text>
-						{/* </Content> */}
+						<Text>
+							&copy; {new Date().getFullYear()} | SMKN 2 Majene
+						</Text>
 					</Content>
-					<Content span={8}>
+					<Content>
 						<Title level={4}>Kategori</Title>
 						<Divider
 							style={{
@@ -76,7 +87,7 @@ const MainFooter = ({ footerBg = "#d9d9d9" }) => {
 							<Tag color="#014760">Beasiswa</Tag>
 						</Flex>
 					</Content>
-					<Content span={8}>
+					<Content>
 						<Title level={4}>FAQ</Title>
 						<Divider
 							style={{
@@ -106,7 +117,7 @@ const MainFooter = ({ footerBg = "#d9d9d9" }) => {
 							elit. Pariatur, itaque.
 						</Text>
 					</Content>
-				</Row>
+				</RowStyled>
 			</Wrapper>
 		</Footer>
 	);

@@ -11,6 +11,14 @@ class IndexController extends Controller
         return Inertia::render('Home');
     }
 
+    public function visi_misi() {
+        return Inertia::render('VisiMisi');
+    }
+    
+    public function pengumuman() {
+            return Inertia::render('Pengumuman');
+    }
+
     public function render() {
         return Inertia::render('Profile', ["name" => "fajrin"]);
     }

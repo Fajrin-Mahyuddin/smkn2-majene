@@ -23,7 +23,7 @@ const Img = styled.img`
 	background-color: #2c2c2c;
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 	object-position: center;
 `;
 
